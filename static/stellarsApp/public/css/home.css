@@ -1,5 +1,5 @@
 .home {
-    margin-left: 260px;
+    margin-left: 78px;
     padding: 60px;
     background-color: rgb(15, 15, 17);
 }
@@ -30,4 +30,7 @@ h5,p {
 }
 a {
     text-decoration: none;
+}
+#carouselExampleCaptions{
+    margin-top: 40px;
 }
