@@ -6,13 +6,14 @@
 
 <div class="home">
     <div class="row">
-        <div class="col-md-1"></div>
-        <div class="col-lg-10">
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
+        <div class="col-lg-1"></div>
+        <div class="col-lg-10 col-md-12">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel" data-bs-interval="10000">
                 <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
                 <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3" aria-label="Slide 4"></button>
                 </div>
                 <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -39,6 +40,14 @@
                     <p><small>Una joven que viaja a Detroit para una entrevista de trabajo alquila una casa para pasar la noche. Pero cuando llega a altas horas de la noche, descubre que la casa está doblemente reservada y que un hombre extraño ya se está quedando allí. En contra de su buen juicio, decide pasar la noche allí, pero pronto descubre que hay mucho más que temer que un invitado inesperado.</small> </p>
                     </div></a>
                 </div>
+                <div class="carousel-item">
+                    <a href="">
+                    <img src="{% static 'stellarsApp/public/img/BlackFriday.png' %}" class="d-block w-100" id="sale" alt="...">
+                    <div class="carousel-caption d-none d-xl-block">
+                    <h5></h5>
+                    <p><small></small> </p>
+                    </div></a>
+                </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -50,14 +59,14 @@
                 </button>
             </div>
         </div>
-        <div class="col-md-1"></div>
+        <div class="col-lg-1"></div>
     </div>
 
     
     <h2>ESTRENOS</h2>
     <div class="row gy-5">
             
-        <div class="col-lg-4">
+        <div class="col-md-6 col-lg-4">
             <div class="card text-bg-dark">
                 <a href="">
                 <img src="{% static 'stellarsApp/public/img/Halloween2.jpg' %}" class="card-img" alt="...">
@@ -68,7 +77,7 @@
                 </div></a>
             </div>  
         </div>
-        <div class="col-lg-4">
+        <div class="col-md-6 col-lg-4">
             <div class="card text-bg-dark">
                 <a href="">
                 <img src="{% static 'stellarsApp/public/img/Smile.jpg' %}" class="card-img" alt="...">
@@ -79,7 +88,7 @@
                 </div></a>
             </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-md-6 col-lg-4">
             <div class="card text-bg-dark">
                 <a href="">
                 <img src="{% static 'stellarsApp/public/img/Barbarian.jpg' %}" class="card-img" alt="...">
@@ -95,96 +104,147 @@
     
     <h2>PELICULAS</h2>
     <div class="row gy-5">
-        <div class="col-lg-4">
+        <div class="col-md-6 col-lg-4">
             <div class="card text-bg-dark">
-                <a href="">
                 <img src="{% static 'stellarsApp/public/img/Halloween2.jpg' %}" class="card-img" alt="...">
                 <div class="estreno">
                     <small>ESTRENO</small>   
                 </div>
                 <div class="card-img-overlay">
-                <h5 class="card-title"></h5>
+                <h5 class="card-title"><small>Halloween: La Noche Final</small></h5>
                 <p class="card-text"></p>
                 <p class="card-text"><small></small></p>
-                </div></a>
+                <div class="card-img-overlay">
+                    <a href=""><button type="button" class="btn btn-warning btn-sm"><b>Descripción</b></button></a>
+                    <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><b>Comprar</b></button>
+                </div>
+                </div>
             </div>  
         </div>
-        <div class="col-lg-4">
+        <div class="col-md-6 col-lg-4">
             <div class="card text-bg-dark">
-                <a href="">
                 <img src="{% static 'stellarsApp/public/img/Smile.jpg' %}" class="card-img" alt="...">
                 <div class="estreno">
-                    <small>ESTRENO</small>   
+                    <small>ESTRENO</small>
                 </div>
                 <div class="card-img-overlay">
-                <h5 class="card-title"></h5>
+                <h5 class="card-title"><small>Smile</small></h5>
                 <p class="card-text"></p>
                 <p class="card-text"><small></small></p>
-                </div></a>
+                <div class="card-img-overlay">
+                    <a href=""><button type="button" class="btn btn-warning btn-sm"><b>Descripción</b></button></a>
+                    <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><b>Comprar</b></button>
+                </div>
+                </div>
             </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-md-6 col-lg-4">
             <div class="card text-bg-dark">
-                <a href="">
                 <img src="{% static 'stellarsApp/public/img/Barbarian.jpg' %}" class="card-img" alt="...">
                 <div class="estreno">
                     <small>ESTRENO</small>   
                 </div>
                 <div class="card-img-overlay">
-                <h5 class="card-title"></h5>
+                <h5 class="card-title"><small>Barbarian</small></h5>
                 <p class="card-text"></p>
                 <p class="card-text"><small></small></p>
-                </div></a>
+                <div class="card-img-overlay">
+                    <a href=""><button type="button" class="btn btn-warning btn-sm"><b>Descripción</b></button></a>
+                    <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><b>Comprar</b></button>
+                </div>
+                </div>
             </div> 
         </div>
-        <div class="col-lg-4">
+        <div class="col-md-6 col-lg-4">
             <div class="card text-bg-dark">
-                <a href="">
                 <img src="{% static 'stellarsApp/public/img/Terrifier_2.jpg' %}" class="card-img" alt="...">
+                <div class="cartelera">
+                    <small>EN CARTELERA</small>
+                </div>
                 <div class="card-img-overlay">
-                <h5 class="card-title"></h5>
+                <h5 class="card-title"><small>Terrifier 2</small></h5>
                 <p class="card-text"></p>
                 <p class="card-text"><small></small></p>
-                </div></a>
+                <div class="card-img-overlay">
+                    <a href=""><button type="button" class="btn btn-warning btn-sm"><b>Descripción</b></button></a>
+                    <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><b>Comprar</b></button>
+                </div>
+                </div>
             </div>  
         </div>
-        <div class="col-lg-4">
+        <div class="col-md-6 col-lg-4">
             <div class="card text-bg-dark">
-                <a href="">
                 <img src="{% static 'stellarsApp/public/img/Black_Adam.jpg' %}" class="card-img" alt="...">
+                <div class="cartelera">
+                    <small>EN CARTELERA</small>
+                </div>
                 <div class="card-img-overlay">
-                <h5 class="card-title"></h5>
+                <h5 class="card-title"><small>Black Adam</small></h5>
                 <p class="card-text"></p>
                 <p class="card-text"><small></small></p>
-                </div></a>
+                <div class="card-img-overlay">
+                    <a href=""><button type="button" class="btn btn-warning btn-sm"><b>Descripción</b></button></a>
+                    <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><b>Comprar</b></button>
+                </div>
+                </div>
             </div>
         </div>
-        <div class="col-lg-4">
+        <div class="col-md-6 col-lg-4">
             <div class="card text-bg-dark">
-                <a href="">
                 <img src="{% static 'stellarsApp/public/img/Avatar.jpg' %}" class="card-img" alt="...">
+                <div class="cartelera">
+                    <small>EN CARTELERA</small>
+                </div>
                 <div class="card-img-overlay">
-                <h5 class="card-title"></h5>
+                <h5 class="card-title"><small>Avatar: The way of water</small></h5>
                 <p class="card-text"></p>
                 <p class="card-text"><small></small></p>
-                </div></a>
+                <div class="card-img-overlay">
+                    <a href=""><button type="button" class="btn btn-warning btn-sm"><b>Descripción</b></button></a>
+                    <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><b>Comprar</b></button>
+                </div>
+                </div>
             </div> 
         </div>
-        <div class="col-lg-4">
+        <div class="col-md-6 col-lg-4">
             <div class="card text-bg-dark">
-                <a href="">
                 <img src="{% static 'stellarsApp/public/img/Black_Panther.jpg' %}" class="card-img" alt="...">
                 <div class="proximamente">
                     <small>PRÓXIMAMENTE</small>   
                 </div>
                 <div class="card-img-overlay">
-                <h5 class="card-title"></h5>
-                <p class="card-text"></p>
-                <p class="card-text"><small></small></p>
-                </div></a>
+                    <h5 class="card-title"><small><b>Black Panther: Wakanda Forever</b></small></h5>
+                    <p class="card-text"></p>
+                    <p class="card-text"><small></small></p>
+                    <div class="card-img-overlay">
+                        <a href=""><button type="button" class="btn btn-warning btn-sm"><b>Descripción</b></button></a>
+                        <button type="button" class="btn btn-warning btn-sm" data-bs-toggle="modal" data-bs-target="#staticBackdrop"><b>Comprar</b></button>
+                    </div>
+                </div>
             </div> 
         </div>
     </div>
-    
+
+        <!-- Modal -->
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h1 class="modal-title fs-5" id="staticBackdropLabel">FINALIZAR COMPRAR</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate quibusdam tempora illo facere consectetur dolores placeat, ea unde sapiente et dolore numquam itaque sed accusantium autem, cupiditate excepturi saepe neque?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate quibusdam tempora illo facere consectetur dolores placeat, ea unde sapiente et dolore numquam itaque sed accusantium autem, cupiditate excepturi saepe neque?</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate quibusdam tempora illo facere consectetur dolores placeat, ea unde sapiente et dolore numquam itaque sed accusantium autem, cupiditate excepturi saepe neque?</p>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-dark btn-sm" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-light btn-sm">Comprar</button>
+            </div>
+        </div>
+        </div>
+    </div>
+
 </div>    
 {% endblock content %}

@@ -22,6 +22,7 @@ h1 {
     width: 78px;
     background: #11101d;
     transition: all 0.3s ease 0s;
+    z-index: 10;
 }
 .sidebar.show {
     width: 260px;
@@ -124,7 +125,7 @@ h1 {
 .topbar-content {
     display: flex;
     position: fixed;
-    background: red;
+    background: rgb(200, 0, 0);
     left: 0;
     /* width: calc(100% - 260px); */
     width: 100%;
