@@ -75,9 +75,16 @@ WSGI_APPLICATION = 'stellars.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.postgresql_psycopg2',
+#     }
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
@@ -130,3 +137,9 @@ STATIC_ROOT = BASE_DIR / 'static_root'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# It is the default path to a directory where django store uploaded files
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# It is the public url of the directory
+MEDIA_URL = '/media/'
