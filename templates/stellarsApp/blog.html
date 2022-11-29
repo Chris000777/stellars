@@ -29,10 +29,10 @@
     {% for post in posts %}
     <article class="media content-section">
         <div class="header-post">
-            <img
-            class="rounded-circle article-img"
-            src="{% static 'blog/images/' %}{{post.imageAvatar}}"
-            />
+          <img
+          class="rounded-circle article-img"
+          src="{{post.author.profile.image.url}}"
+        />
             <h4 class="subtitle">{{post.user_name}}</h4>
         </div>
         <div class="media-body">
@@ -43,7 +43,7 @@
       <div class="subtitle-post">
           <h4>
               <a class="article-title" href="#"
-              ><i class="bx bx-movie"></i>{{ post.title }}</a
+              ><i class="bx bx-movie"></i>{{ post.movie.title }}</a
               >
             </h4>
             {% comment %}
