@@ -47,7 +47,7 @@ a {
     margin-top: 40px;
 }
 #carouselExampleCaptions:hover .d-block{
-    filter: brightness(60%);
+    filter: brightness(70%);
 }
 .carousel-item{
     transition: 2s;
@@ -109,17 +109,22 @@ a {
     filter: brightness(70%);
 }
 .modal-header{
-    background-color: black;
+    background-color: rgb(0,0,30);
     color: antiquewhite;
 }
-.modal-body > p{
+.modal-body > label{
     color: black;
 }
 .modal-footer{
-    background-color: black;
+    background-color: rgb(0,0,30);
     color: antiquewhite;
 }
-
+.modal-body{
+    background-color: rgb(180,0,0);
+}
+#id_nombre, #id_apellido, #id_direccion, #id_email, #id_telefono{
+    margin: 10px 40px;
+}
 @media(max-width:420px){
 .home {
     padding: 20px;

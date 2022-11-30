@@ -234,13 +234,21 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate quibusdam tempora illo facere consectetur dolores placeat, ea unde sapiente et dolore numquam itaque sed accusantium autem, cupiditate excepturi saepe neque?</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate quibusdam tempora illo facere consectetur dolores placeat, ea unde sapiente et dolore numquam itaque sed accusantium autem, cupiditate excepturi saepe neque?</p>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate quibusdam tempora illo facere consectetur dolores placeat, ea unde sapiente et dolore numquam itaque sed accusantium autem, cupiditate excepturi saepe neque?</p>
+                {% if mensaje %}
+                <div class="alert alert-success" role="alert">
+                    {{mensaje}}
+                </div>
+                {% endif %}
+                <form novalidate id="contac-form" name="contac-form" action="{% url 'Inicio' %}" method="post">
+                    {% csrf_token %}
+                    <table>
+                      {{contacto_form}}  
+                    </table>
             </div>
             <div class="modal-footer">
             <button type="button" class="btn btn-dark btn-sm" data-bs-dismiss="modal">Cerrar</button>
-            <button type="button" class="btn btn-light btn-sm">Comprar</button>
+            <button type="submit" class="btn btn-light btn-sm">Comprar</button>
+            </form>
             </div>
         </div>
         </div>
