@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse
 from datetime import datetime
-from stellarsApp.models import Post
+from stellarsApp.models import Post, Movie
 
 # -------------- Vistas renderizadas del sitio -------------- #
 def home(request):
@@ -12,8 +12,9 @@ def lounges(request):
 def promotions(request):
     return render(request, 'stellarsApp/promotions.html')
 
-def previews(request):
-    return render(request, 'stellarsApp/previews.html')
+def previews(request,id):
+    film=Movie.objects.filter(id=id).first()
+    return render(request, 'stellarsApp/previews.html',{'film':film})
 
 def blog(request):
     posts=Post.objects.all()
