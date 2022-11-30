@@ -33,7 +33,7 @@
           class="rounded-circle article-img"
           src="{{post.author.profile.image.url}}"
         />
-            <h4 class="subtitle">{{post.user_name}}</h4>
+            <h4 class="subtitle">{{post.author.username}}</h4>
         </div>
         <div class="media-body">
       <div class="article-metadata">
@@ -42,7 +42,7 @@
       
       <div class="subtitle-post">
           <h4>
-              <a class="article-title" href="#"
+              <a class="article-title" href="{% url 'Preestrenos' post.movie.id %}"
               ><i class="bx bx-movie"></i>{{ post.movie.title }}</a
               >
             </h4>

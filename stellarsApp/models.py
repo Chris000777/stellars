@@ -7,11 +7,15 @@ from django.contrib.auth.models import User
 class Movie(models.Model):
     title = models.CharField(max_length=100)
     year = models.IntegerField()
-    genre=models.CharField(max_length=50)
-    director=models.CharField(max_length=50)
-    imdbRating=models.FloatField()
-    country=models.CharField(max_length=50)
-    duration=models.IntegerField()
+    content = models.TextField(blank=True, null=True)
+    genre = models.CharField(max_length=50)
+    director = models.CharField(max_length=50)
+    imdbRating = models.FloatField()
+    country = models.CharField(max_length=50)
+    duration = models.IntegerField()
+    # image = models.ImageField(upload_to='profile_pics', default='poster.jpg')
+    image = models.CharField(max_length=255, blank=True, null=True)
+    actors = models.TextField(blank=True, null=True)
     # actors=models.CharField(max_length=250)
 
 class Post(models.Model):
