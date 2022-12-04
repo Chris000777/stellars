@@ -130,6 +130,7 @@ h1 {
     /* width: calc(100% - 260px); */
     width: 100%;
     z-index: 10;
+    justify-content: space-between;
 }
 
 .topbar-content .topbar-section {
@@ -170,9 +171,65 @@ h1 {
 }
 
 .section {
-    margin-left: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
     display: flex;
     align-items: center;
     font-size: 30px;
     font-weight: 700;
+    text-shadow: 0px 0px 15px yellow
 }
+
+.prueba{
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+}
+.prueba > div {
+    margin: 5px;
+}
+
+@media(max-width:1270px){
+
+    .section{
+        font-size: 25px;
+    }
+    }
+    @media(max-width:1170px){
+    
+        .section{
+            font-size: 22px;
+    }
+    }
+    @media(max-width:1080px){
+    
+    .section{
+        font-size: 20px;
+    }
+    }
+    @media(max-width:1030px){
+    
+        .section{
+            font-size: 18px;
+    }
+    }
+    @media(max-width:985px){
+    
+        .section{
+            font-size: 15px;
+    }
+    }
+    @media(max-width:920px){
+    
+    .section{
+        display: none;
+    }
+    }
+    @media(max-width:500px){
+    
+        .prueba .btn{
+            font-size: 10px;
+            padding: 2.5px;
+            margin: -3.5px;
+    }
+    }

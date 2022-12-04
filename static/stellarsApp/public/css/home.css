@@ -121,9 +121,13 @@ a {
 }
 .modal-body{
     background-color: rgb(180,0,0);
+    background-image: linear-gradient(to left, rgb(220,0,0) , rgb(240,240,0));
 }
 #id_nombre, #id_apellido, #id_direccion, #id_email, #id_telefono{
     margin: 10px 40px;
+}
+.btn-close{
+    background-color: antiquewhite;
 }
 @media(max-width:420px){
 .home {
