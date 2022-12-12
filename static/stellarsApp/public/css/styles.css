@@ -180,17 +180,12 @@ h1 {
 /* ----------- Footer ------------ */
 
 body {
-    position: relative;
+    position: absolute;
   }
   
 body::after {
     content: '';
     display: block;
-    height: 40px;
-  }
-
-.bootstrap-js {
-    padding-bottom: 200px;
   }
 
 .row-footer{
@@ -198,6 +193,7 @@ body::after {
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
+    background-color:#11101d; /* #161616 */
   }
 
   ul{
@@ -205,7 +201,7 @@ body::after {
   }
 
 .footer {
-    position:absolute;
+    position:relative;
     align-items: flex-start;
     bottom: 0;
     width: 100%;

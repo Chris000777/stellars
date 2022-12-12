@@ -18,13 +18,10 @@
 		<!--Bootstrap CSS-->
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 		<!--CSS home-->
-
+		<link href="{% static 'stellarsApp/public/css/home.css' %}" rel="stylesheet">
 		<!-- Agregado por Max - Iconos redes sociales footer -->
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-
-		<link
-			href="{% static 'stellarsApp/public/css/home.css' %}"
-			rel="stylesheet">
+		
     </head>
 
 	<body>
@@ -113,7 +110,11 @@
 		</div>
 		<!-- End sidebar -->
 
-		
+		<!-- Contenido dinámico -->
+
+		{% block content %}
+		{% endblock content %}
+
 		<!-- Inicio Footer -->
 
 		<footer class="footer">			
@@ -152,14 +153,7 @@
 	 
 		 <!-- Fin Footer -->
 
-
 		<script src="{% static 'stellarsApp/public/js/base.js' %}"></script>
-
-		<!-- Contenido dinámico -->
-
-		{% block content %}
-		{% endblock content %}
 
 	</body>
 </html>
-
