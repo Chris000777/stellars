@@ -21,7 +21,8 @@
 		<link href="{% static 'stellarsApp/public/css/home.css' %}" rel="stylesheet">
 		<!-- Agregado por Max - Iconos redes sociales footer -->
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-		
+		{% block stylecontent %}
+		{% endblock stylecontent %}
     </head>
 
 	<body>
@@ -64,7 +65,7 @@
 
 			<ul class="nav-links">
 				<li>
-					<a href="#">
+					<a href="{% url 'Inicio' %}">
 						<i class='bx bx-home' ></i>
 						<span class="link_name">Inicio</span>
 					</a>
@@ -102,7 +103,7 @@
 					<ul class="sub-menu blank"></ul>
 				</li>
 				<li>
-					<a href="#">
+					<a href="{% url 'Blog' %}">
 						<i class='bx bx-comment-edit'></i>
 						<span class="link_name">Blog</span>
 					</a>

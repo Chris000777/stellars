@@ -1,0 +1,23 @@
+>>> import json
+>>> from stellarsApp.models import Post
+
+with open('db/posts.json') as f:
+    posts_json=json.load(f)
+
+for post in posts_json:
+    post = Post(title=post['title'], content=post['content'], author_id=post['user_id'], movie_id=post['movie_id'])
+    post.save()
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+
+>>> import json
+>>> from stellarsApp.models import Movie
+
+with open('db/movies.json') as f:
+    movies_json=json.load(f)
+
+for movie in movies_json:
+    film = Movie(title=movie['Title'], year=movie['Year'], content=movie['Plot'], genre=movie['Genre'], director=movie['Director'], imdbRating=movie['imdbRating'], country=movie['Country'], duration=movie['Runtime'], actors=movie['Actors'], image=movie['Poster'])
+    film.save()
+
