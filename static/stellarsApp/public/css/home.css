@@ -5,7 +5,7 @@
 }
 h2 {
     color: rgb(201, 204, 207);
-    background-color: #3e0000;
+    background-color: #460000;
     margin: 40px 0px;
     padding: 10px 0px;
     text-align: center;
@@ -22,7 +22,7 @@ h5,p {
 .estreno {
     position: relative;
     bottom: 0px;
-    background-color: #3e0000;
+    background-color: #460000;
     color: rgb(201, 204, 207);
     text-align: center;
 }

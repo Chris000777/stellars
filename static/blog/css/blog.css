@@ -4,6 +4,7 @@
     background-color: rgb(15, 15, 17);
     margin-left:78px;
     margin-top:78px;
+    width: 1441px;
 }
 
 /* wrap */
@@ -17,8 +18,8 @@
   .video-box {
     position: relative;
     overflow: hidden;
-    width: 191.2vh;
-    height: 90vh;
+    width: 100%;
+    height: 88vh;
   }
   .video {
     position: absolute;
