@@ -18,13 +18,28 @@ class Movie(models.Model):
     actors = models.TextField(blank=True, null=True)
     # actors=models.CharField(max_length=250)
 
+    def __str__(self):
+        return f"{self.title}"
+
 class Post(models.Model):
-    title=models.CharField(max_length=100)
-    content=models.TextField(max_length=100)
+    title=models.CharField(max_length=100, verbose_name='Película')
+    content=models.TextField(max_length=100, verbose_name='Comentario')
     date_posted=models.DateTimeField(default=timezone.now)
-    author=models.ForeignKey(User, on_delete=models.CASCADE)
-    movie=models.ForeignKey(Movie, on_delete=models.CASCADE)
-    rating = models.IntegerField(blank=True, null=True)
+    author=models.ForeignKey(User, on_delete=models.CASCADE,)
+    movie=models.ForeignKey(Movie, on_delete=models.CASCADE,)
+    rating = models.IntegerField(blank=True, null=True,)
+    alta = models.BooleanField(default=1)
+
+    def soft_delete(self):
+        self.alta=False
+        super().save()
+    
+    def restore(self):
+        self.alta=True
+        super().save()
+
+    def __str__(self):
+        return f"{self.title}"
 
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)

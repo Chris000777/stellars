@@ -6,7 +6,7 @@ class MovieAdmin(admin.ModelAdmin):
     list_display = ['title']
 
 class PostAdmin(admin.ModelAdmin):
-    list_display = ['title']
+    list_display = ['title','content','alta']
 
 
 admin.site.register(Movie, MovieAdmin)

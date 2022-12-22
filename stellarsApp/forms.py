@@ -1,5 +1,6 @@
 from django import forms
 from django.forms import ValidationError
+from .models import Post
 
 def solo_caracteres(valor):
     if any(char.isdigit() for char in valor):
@@ -38,5 +39,33 @@ class ContactoForm(forms.Form):
         label='Teléfono',
         max_length=20,
         widget=forms.TextInput(attrs={'class':'form-control','type':'number'}))
+
+
+class PostForm(forms.ModelForm):
+
+    # nombre = forms.CharField(widget=forms.TextInput(attrs={'class':'form-control','placeholder':'Ingrese nombre'}),error_messages={'required':'Por favor no te olvide de mi!'})
+    class Meta:
+        model=Post
+        fields= fields=['author', 'movie','title','content', 'rating', 'alta']
+        # fields=['title','content']
+        #exclude=('baja',)
+        # widgets = {
+        #     'nombre': forms.TextInput(attrs={'class':'form-control','placeholder':'Ingrese nombre'})
+        # }
+        # error_messages={
+        #     'nombre': {
+        #         'required':'No te olvides del nombre!'
+        #     }
+        # }
+
+# class PostFormValidado(PostForm):
+    
+#     def clean_titulo(self):
+#         for post in posts:
+#             if (title.upper() != peliculas.upper()):
+#                 titulo = self.cleaned_data['title']
+#             if nombre.upper() == 'ORIGAMI':
+#                 raise ValidationError('Codo a codo no dicta esta categoria de cursos')
+#             return title
 
     

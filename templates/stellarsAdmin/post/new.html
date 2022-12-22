@@ -1,0 +1,22 @@
+{% extends '../base_admin.html' %}
+
+{% block titulo %}Nuevo Post{% endblock%}
+
+{% block contenido %}
+<h1 class="mt-4">Posts</h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item"><a href="{% url 'inicio_administracion' %}">Administracion</a></li>
+    <li class="breadcrumb-item active">Nuevo Post</li>
+</ol>
+
+
+<div class="card">
+    <div class="card-header">Creacion de post</div>
+    <div class="card-body">
+        <form action="{% url 'Post_nuevo' %}" method="post" novalidate>
+            {% csrf_token %}
+            {% include 'stellarsAdmin/post/form.html' %}
+        </form>
+    </div>
+</div>
+{% endblock %}
