@@ -42,12 +42,19 @@
 				<span>APROVECHA NUESTRAS OFERTAS NAVIDEÑAS 🎁</span>
 			</div>
 			<div class="inicio-sesion">
+				{% if user.is_authenticated %}
+				{% comment %} <p>Bienvenido\a, {{ user.username }}.</p> {% endcomment %}
+				<p type="text" style="display: inline" class="">Hola, {{ user.username }}.</p>
+				  <!-- <a type="text" style="display: inline" href="#" class="">Cambiar password</a> -->
+				<a type="button" href="{% url 'logout' %}" class="btn btn-outline-primary me-2">Cerrar Sesión</a>
+				{% else %}
 				<div>
-					<button type="button" class="btn btn-light"><b>Iniciar sesión</b></button>
+					<button type="button" class="btn btn-light"><a href="{% url 'login' %}"><b>Iniciar sesión</b></a></button>
 				</div>
 				<div>
-					<button type="button" class="btn btn-dark"><b>Registrarse</b></button>
+					<button type="button" class="btn btn-dark"><a href="{% url 'registrarse' %}"><b>Registrarse</b></a></button>
 				</div>
+				{% endif %}
 			</div>
 		</div>
 
@@ -109,6 +116,24 @@
 					</a>
 					<ul class="sub-menu blank"></ul>
 				</li>
+				{% if perms.stellarsApp.view_post %}
+				<li>
+					<a href="{% url 'inicio_administracion' %}">
+						<i class=''></i>
+						<span class="link_name">Admin</span>
+					</a>
+					<ul class="sub-menu blank"></ul>
+				</li>
+				{% endif %}
+				{% if perms.stellarsApp.add_post %}
+				<li>
+					<a href="{% url 'Post_nuevo' %}">
+						<i class=''></i>
+						<span class="link_name">Post</span>
+					</a>
+					<ul class="sub-menu blank"></ul>
+				</li>
+				{% endif %}
 			</ul>
 		</div>
 		

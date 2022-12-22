@@ -7,6 +7,7 @@ class MovieAdmin(admin.ModelAdmin):
 
 class PostAdmin(admin.ModelAdmin):
     list_display = ['title','content','alta']
+    list_filter = ('author',)
 
 
 admin.site.register(Movie, MovieAdmin)

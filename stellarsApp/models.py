@@ -22,10 +22,10 @@ class Movie(models.Model):
         return f"{self.title}"
 
 class Post(models.Model):
-    title=models.CharField(max_length=100, verbose_name='Película')
+    title=models.CharField(max_length=100, verbose_name='Título')
     content=models.TextField(max_length=100, verbose_name='Comentario')
     date_posted=models.DateTimeField(default=timezone.now)
-    author=models.ForeignKey(User, on_delete=models.CASCADE,)
+    author=models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Autor')
     movie=models.ForeignKey(Movie, on_delete=models.CASCADE,)
     rating = models.IntegerField(blank=True, null=True,)
     alta = models.BooleanField(default=1)

@@ -1,6 +1,8 @@
 from django import forms
 from django.forms import ValidationError
 from .models import Post
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.models import User
 
 def solo_caracteres(valor):
     if any(char.isdigit() for char in valor):
@@ -68,4 +70,7 @@ class PostForm(forms.ModelForm):
 #                 raise ValidationError('Codo a codo no dicta esta categoria de cursos')
 #             return title
 
-    
+class RegistrarUsuarioForm(UserCreationForm):
+    class Meta:
+        model = User
+        fields = ['username','email' , 'password1', 'password2']
